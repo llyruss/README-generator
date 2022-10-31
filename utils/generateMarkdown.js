@@ -93,15 +93,15 @@ return `# ${data.title}
  
  
  ## Contributing
- ${response.contribute}
+ ${data.contribute}
 
  ## Tests
- ${response.tests}
+ ${data.tests}
 
  ## Questions
- For questions, take a look at my GitHub account: ${response.gitUserName}  
- or email me at: ${response.email}
- 
+ For questions, take a look at my GitHub account: ${data.gitUserName}  
+ or email me at: ${data.email}
+
 `;
 }
 
