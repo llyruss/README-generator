@@ -8,34 +8,54 @@ function renderLicenseBadge(license) {
 
     case "Apache 2.0 License" :
       return "![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)"
-      break
+      break;
 
     case "The MIT License" :
       return "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)"
-      break
+      break;
 
     case "Boost Software License 1.0" :
       return "![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)"
-      break
+      break;
 
     case "Eclipse Public Licesne 1.0" :
       return "![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)"
-      break 
+      break;
   }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
-
+   switch(license) {
+      case "none" :
+        return ""
+        break;
+  
+      case "Apache 2.0 License" :
+        return "(https://opensource.org/licenses/Apache-2.0)"
+        break;
+  
+      case "The MIT License" :
+        return "(https://opensource.org/licenses/MIT)"
+        break;
+  
+      case "Boost Software License 1.0" :
+        return "(https://www.boost.org/LICENSE_1_0.txt)"
+        break;
+  
+      case "Eclipse Public Licesne 1.0" :
+        return "(https://opensource.org/licenses/EPL-1.0)"
+        break;
+    }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-
-
+  return `### License: 
+    ${renderLicenseBadge(license)}  
+    ${renderLicenseLink(license)}`
 }
 
 // TODO: Create a function to generate markdown for README
